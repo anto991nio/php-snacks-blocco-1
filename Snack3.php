@@ -4,7 +4,7 @@
 
 $posts = [
 
-    '10/01/2019' => [
+    "10/01/2019" => [
         [
             'title' => 'Post 1',
             'author' => 'Michele Papagni',
@@ -18,7 +18,7 @@ $posts = [
     ],
     '10/02/2019' => [
         [
-            'title' => 'Post 3',
+            "title" => "Post 3",
             'author' => 'Michele Papagni',
             'text' => 'Testo post 3'
         ]
@@ -56,15 +56,20 @@ $posts = [
 
 <body>
     
-   <?php        
-            
-for($i = 0; $i < count($posts); ++$i) {
-    $datePost = $posts[$i]["title"];
-    ?>
-    <li><?php echo $title ?></li>
     <?php
-}
-?>
+
+    $dati_posts = array_keys($posts);
+
+
+    for ($i = 0; $i < count($dati_posts); ++$i) {
+        $currentItem = $dati_posts[$i];
+       
+
+    ?>
+        <li><?php echo $currentItem ?></li>
+    <?php
+    }
+    ?>
 
 
 </body>
