@@ -55,8 +55,9 @@ $teambasket = [
         <?php
         for ($i = 0; $i < count($teambasket); $i++) {
             $currentItem = $teambasket[$i];
-            $squadre = $currentItem["squadraCasa"] ." ". "VS" ." ". $currentItem["squadraOspite"];
-            $punteggio=$currentItem["puntiCasa"] ." ". "-" ." ". $currentItem["puntiOspiti"];
+            $squadre = $currentItem["squadraCasa"] ." ". "VS" ." ". $currentItem["squadraOspite"] ." "."<span>|</span>";
+            
+            $punteggio=$currentItem["puntiCasa"] ." ". " - " ." ". $currentItem["puntiOspiti"];
             ?>
             <li>
             <strong><?php echo $squadre ?></strong>

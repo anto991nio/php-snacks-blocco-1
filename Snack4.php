@@ -2,7 +2,7 @@
 
 $arrayNumber=[];
 
-for( $i=0; count($arrayNumber) < 16; $i++){
+for( $i=0; count($arrayNumber) < 15; $i++){
     $number = rand(1,100);
 
     if(!in_array($number,$arrayNumber)){

@@ -42,7 +42,7 @@ $posts = [
     ],
 ];
 
-$posts['10/02/2019'][0]["title"]
+/* $posts['10/02/2019'][0]["title"] */
 
 ?>
 
@@ -63,7 +63,7 @@ $posts['10/02/2019'][0]["title"]
     $dati_posts = array_keys($posts);
     
 
-    for ($i = 0; $i < count($dati_posts); $i++) {
+    for ($i = 0; $i < count($posts); $i++) {
         $currentItem = $dati_posts[$i];
        
     ?>
@@ -71,7 +71,12 @@ $posts['10/02/2019'][0]["title"]
         <ul><?php for($y = 0; $y < count($posts[$currentItem]); $y++){
             $post =$posts[$currentItem][$y]
             ?>
-        <li> <?php echo $post["title"] . "-". $post["author"]. "-". $post["text"]?></li>
+        <li> 
+            <p><?php echo $post["title"]?></p>
+            <p><?php echo $post["author"]?></p>
+            <p><?php echo $post["text"]?></p>
+        </li>
+            
         
         <?php
         }
